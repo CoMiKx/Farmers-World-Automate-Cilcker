@@ -81,7 +81,7 @@ window.automateMining = async function () {
         activeItem.get(0).click();
     }
     // get in farm map
-    await window.sleep(3000);
+    await window.sleep(60*1000);
     $(".navbar-container img[Alt='Map']").click();
     $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(3) > span").click();
     var itemsFarms = $("section .carousel__img--item");
@@ -109,7 +109,7 @@ window.automateMining = async function () {
         }
         activeItemFarm.get(0).click();
     }
-    await window.sleep(3000);
+    await window.sleep(60*1000);
     $("#root > div > div > div.game-content > section.navbar-container > div:nth-child(5) > img").click();
     $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(1) > span").click();
 }
