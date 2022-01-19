@@ -25,14 +25,14 @@ window.sleep = function (ms) {
 
 window.waitForModal = async function () {
     while ($(".modal-wrapper").length == 0) {
-        await window.sleep(5000);
+        await window.sleep(100);
     }
-    await window.sleep(5000);
+    await window.sleep(1000);
     if ($("#loadingModal").length > 0) {
         do {
-            await window.sleep(5000);
+            await window.sleep(1000);
         } while ($("#loadingModal").length > 0);
-        await window.sleep(5000);
+        await window.sleep(2000);
     }
 }
 
