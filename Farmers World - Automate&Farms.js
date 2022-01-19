@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         Farmers World - Automate&Farm
+// @name         Farmers World - Automate&Farms
 // @namespace    https://play.farmersworld.io/
 // @version      1.0.2
-// @description  Farmers World - Automate
+// @description  Farmers World - Automate&Farms
 // @author       CoMiKx
 // @match        https://play.farmersworld.io/*
-// @icon         https://www.google.com/s2/favicons?domain=play.farmersworld.io
+// @icon         https://www.google.com/s2/favicons?domain=farmersworld.io
 // @grant        none
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 // ==/UserScript==
