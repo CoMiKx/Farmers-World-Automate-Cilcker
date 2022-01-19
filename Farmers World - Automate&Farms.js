@@ -25,14 +25,14 @@ window.sleep = function (ms) {
 
 window.waitForModal = async function () {
     while ($(".modal-wrapper").length == 0) {
-        await window.sleep(100);
+        await window.sleep(5000);
     }
-    await window.sleep(1000);
+    await window.sleep(5000);
     if ($("#loadingModal").length > 0) {
         do {
-            await window.sleep(1000);
+            await window.sleep(5000);
         } while ($("#loadingModal").length > 0);
-        await window.sleep(2000);
+        await window.sleep(5000);
     }
 }
 
@@ -102,8 +102,8 @@ window.automateMining = async function () {
                     await window.sleep(1000);
                     break;
                 }
-            } else if ($("#root > div > div > div.game-content > div.wapper > section > div > div > div.info-section > div.home-card-button__group > div:nth-child(1) > button > div").get(0) != undefined) {
-                $("#root > div > div > div.game-content > div.wapper > section > div > div > div.info-section > div.home-card-button__group > div:nth-child(1) > button > div").click();
+            } else if ($(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").get(0) != undefined) {
+                $(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").click();
                 await window.sleep(1000);
                 break;
             }
