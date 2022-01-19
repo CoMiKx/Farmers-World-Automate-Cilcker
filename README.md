@@ -1,4 +1,4 @@
-# Farmers-World---Automate-Farms
+# Farmers-World-Automate-Mining&Farms
 Farmers World - Automate&amp;Farms
 แจก Userscript Automate Mining ครับ
 เหมาะสำหรับคนที่มีคอมสำหรับรันบอท 24/7
