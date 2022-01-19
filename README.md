@@ -1,6 +1,7 @@
 # Farmers-World-Automate-Mining&Farms
 Farmers World - Automate-Mining&amp;Farms
-แจก Userscript Automate Mining ครับ
+
+แจก Userscript Automate Mining&amp;Farms ครับ
 เหมาะสำหรับคนที่มีคอมสำหรับรันบอท 24/7
 รองรับการใช้ Stored Mining จาก Membership ทุกชนิด
 ในตอนนี้รองรับแค่ Mining, Farm เท่านั้นนะครับ
