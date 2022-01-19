@@ -16,7 +16,7 @@ Farmers World - Automate&amp;Farms
     โดยหากเปิดใช้งาน บอทจะรอจนกว่าครบโควต้าที่เก็บได้
     แล้วกด Mine ทีเดียว ทำให้ประหยัดการใช้ CPU Wax เล็กน้อย
   - เติม Energy ให้เต็มโดยอัตโนมัติ เมื่อ Energy ไม่เพียงพอ
-    สำหรับการ Mine (Tools) / Claim (Memberships)
+    สำหรับการ Mine (Tools) / Claim (Memberships) / Water (Farms plot)
   - ซ่อม Durability ของ Tools ให้เต็มโดยอัตโนมัติ
     เมื่อ Durability ไม่เพียงพอสำหรับการ Mine
   - ปิดหน้าต่างที่เกิดขึ้นจากการทำงานของบอทให้อัตโนมัติ
