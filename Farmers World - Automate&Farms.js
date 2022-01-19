@@ -5,7 +5,8 @@
 // @description  Farmers World - Automate&Farms
 // @author       CoMiKx
 // @match        https://play.farmersworld.io/*
-// @icon         https://www.google.com/s2/favicons?domain=farmersworld.io
+// @icon         https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=16
+// @icon64       https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=64
 // @grant        none
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 // ==/UserScript==
