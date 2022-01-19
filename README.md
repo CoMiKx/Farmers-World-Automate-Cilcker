@@ -6,6 +6,7 @@ Farmers World - Automate&amp;Farms
 ในตอนนี้รองรับแค่ Mining, Farm เท่านั้นนะครับ
 ไม่รองรับการใช้งานกับ Animal และอื่น ๆ
 (เนื่องจากผมไม่มีเครื่องมือสำหรับสายอื่นนอกจาก Mining)
+
 มีคุณสมบัติต่อไปนี้ครับ
   - เข้าสู่ระบบ Wax Cloud Wallet อัตโนมัติ เมื่อเข้าเว็บเกม
   - กด Mine ให้กับพวก Tools อัตโนมัติเมื่อถึงเวลา
@@ -29,7 +30,9 @@ storedMiningEnable = เปิด/ปิดการทำงาน Stored Minin
 interval = ระยะเวลาความถี่ที่บอทจะเช็คความพร้อมของ Tools และ Memberships ในบัญชีผู้เล่น (1000 = 1 วินาที)
 
 วิธีใช้:
-ลงส่วนขยายเบราว์เซอร์ Tampermonkey >> https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=th
+ลงส่วนขยายเบราว์เซอร์ Tampermonkey >> 
+https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=th
+
 แล้วกด Create a new script หลังจากนั้น Copy Paste
 Ctrl+S หรือกด Save แล้วทดลองเข้าเว็บเล่นเกมได้ตามปกติ
 
