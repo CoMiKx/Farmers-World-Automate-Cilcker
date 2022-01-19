@@ -10,6 +10,7 @@ Farmers World - Automate&amp;Farms
 มีคุณสมบัติต่อไปนี้ครับ
   - เข้าสู่ระบบ Wax Cloud Wallet อัตโนมัติ เมื่อเข้าเว็บเกม
   - กด Mine ให้กับพวก Tools อัตโนมัติเมื่อถึงเวลา
+  - กด Water อัตโนมัติให้ระบบฟาร์มอัตโนมัติเมื่อถึงเวลา
   - กด Claim ให้กับพวก Memberships อัตโนมัติเมื่อถึงเวลา
   - (ทางเลือก) กด Mine แบบรอใช้ Stored Mining
     โดยหากเปิดใช้งาน บอทจะรอจนกว่าครบโควต้าที่เก็บได้
@@ -21,12 +22,15 @@ Farmers World - Automate&amp;Farms
   - ปิดหน้าต่างที่เกิดขึ้นจากการทำงานของบอทให้อัตโนมัติ
     รวมไปถึงหน้าต่าง Error และ CPU Wax เต็ม (ที่เกิดจากบัค)
     หาก CPU Wax เต็ม บอทจะพยายามกระทำใหม่จนกว่าจะสำเร็จ
+    
 บอทตัวนี้ไม่ได้มีอะไรให้ตั้งค่ามากมาย มีแค่ 2-3 อย่างครับ
   - window.automateEnable = true;
   - window.storedMiningEnable = false;
   - window.interval = 5000;
 automateEnable = เปิด/ปิด การทำงานของบอท (ใช้ true/false)
+
 storedMiningEnable = เปิด/ปิดการทำงาน Stored Mining (ใช้ true/false)
+
 interval = ระยะเวลาความถี่ที่บอทจะเช็คความพร้อมของ Tools และ Memberships ในบัญชีผู้เล่น (1000 = 1 วินาที)
 
 วิธีใช้:
