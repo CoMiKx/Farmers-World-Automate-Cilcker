@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         Farmers World - Automate&Farms
+// @name            Farmers World - Automate&Farms
 // @namespace    https://play.farmersworld.io/
-// @version      1.0.2
-// @description  Farmers World - Automate&Farms
-// @author       CoMiKx
-// @match        https://play.farmersworld.io/*
-// @icon         https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=16
-// @icon64       https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=64
-// @grant        none
-// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+// @version          1.0.2
+// @description     Farmers World - Automate&Farms
+// @author           CoMiKx
+// @match           https://play.farmersworld.io/*
+// @icon              https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=16
+// @icon64           https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=64
+// @grant             none
+// @require          https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 // ==/UserScript==
 
 window.automateEnable = true;
@@ -80,17 +80,12 @@ window.automateMining = async function () {
             }
         }
         activeItem.get(0).click();
-    }
-    // get in farm map
-    await window.sleep(60*1000);
-    $(".navbar-container img[Alt='Map']").click();
-    $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(3) > span").click();
-    var itemsFarms = $("section .carousel__img--item");
-    var activeItemFarm = $("section .carousel__img--item.active");
-    if (itemsFarms.length >= 0){
-        for (var j = 0; j <= itemsFarms.length; j++){
-            itemsFarms.get(j).click();
-            var itemFarmsType = $(".info-section .info-title-level").get(0) != undefined ? "farms" : "error";
+        $(".navbar-container img[Alt='Map']").click();
+        $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(3) > span").click();
+        items = $("section .carousel__img--item");
+        var activeItemFarm = $("section .carousel__img--item.active");
+        for (var j = 0; j < items.length; j++){
+            items.get(j).click();
             if (remainingEnergy <= 30) {
                 if ((remainingEnergy + (remainingFood * 5.0)) >= 500) {
                     $(".resource-energy .resource-energy--plus").click();
@@ -105,14 +100,12 @@ window.automateMining = async function () {
             } else if ($(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").get(0) != undefined) {
                 $(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").click();
                 await window.sleep(1000);
-                break;
             }
         }
         activeItemFarm.get(0).click();
+        $("#root > div > div > div.game-content > section.navbar-container > div:nth-child(5) > img").click();
+        $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(1) > span").click();
     }
-    await window.sleep(60*1000);
-    $("#root > div > div > div.game-content > section.navbar-container > div:nth-child(5) > img").click();
-    $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(1) > span").click();
 }
 
 window.automateInterval = setInterval(async function () {
