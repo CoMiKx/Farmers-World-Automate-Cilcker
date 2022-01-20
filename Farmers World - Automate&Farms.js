@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name            Farmers World - Automate&Farms
+// @name         Farmers World - Automate&Farms
 // @namespace    https://play.farmersworld.io/
-// @version          1.0.2
-// @description     Farmers World - Automate&Farms
-// @author           CoMiKx
-// @match           https://play.farmersworld.io/*
-// @icon              https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=16
-// @icon64           https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=64
-// @grant             none
-// @require          https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+// @version      1.0.2
+// @description  Farmers World - Automate&Farms
+// @author       CoMiKx
+// @match        https://play.farmersworld.io/*
+// @icon         https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=16
+// @icon64       https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=64
+// @grant        none
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 // ==/UserScript==
 
 window.automateEnable = true;
