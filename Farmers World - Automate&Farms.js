@@ -82,10 +82,10 @@ window.automateMining = async function () {
         activeItem.get(0).click();
         $(".navbar-container img[Alt='Map']").click();
         $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(3) > span").click();
-        items = $("section .carousel__img--item");
+        var itemsFarms = $("section .carousel__img--item");
         var activeItemFarm = $("section .carousel__img--item.active");
-        for (var j = 0; j < items.length; j++){
-            items.get(j).click();
+        for (var j = 0; j < itemsFarms.length; j++){
+            $("section .carousel__img--item").get(j).click();
             if (remainingEnergy <= 30) {
                 if ((remainingEnergy + (remainingFood * 5.0)) >= 500) {
                     $(".resource-energy .resource-energy--plus").click();
