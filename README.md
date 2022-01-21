@@ -28,6 +28,7 @@ Farmers World - Automate-Mining&amp;Farms
   - window.automateEnable = true;
   - window.storedMiningEnable = false;
   - window.interval = 5000;
+
 automateEnable = เปิด/ปิด การทำงานของบอท (ใช้ true/false)
 
 storedMiningEnable = เปิด/ปิดการทำงาน Stored Mining (ใช้ true/false)
