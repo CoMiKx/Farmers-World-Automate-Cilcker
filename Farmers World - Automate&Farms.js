@@ -86,7 +86,11 @@ window.automateMining = async function () {
         var activeItemFarm = $("section .carousel__img--item.active");
         for (var j = 0; j < itemsFarms.length; j++){
             $("section .carousel__img--item").get(j).click();
-            if (remainingEnergy <= 30) {
+            if (remainingEnergy <= 30 ||
+                ($(".info-section > div.info-text__section > div.info-title > div.info-title-name").get(0).innerText == "Barley Seed" && 
+                $(".card-section .card-number .content").text().split("/ ").map(Number)[0] == 41 ? remainingEnergy <= 230 : 
+                $(".info-section > div.info-text__section > div.info-title > div.info-title-name").get(0).innerText == "Corn Seed" && 
+                $(".card-section .card-number .content").text().split("/ ").map(Number)[0] == 41 ? remainingEnergy <= 230 : false)){
                 if ((remainingEnergy + (remainingFood * 5.0)) >= 500) {
                     $(".resource-energy .resource-energy--plus").click();
                     do {
