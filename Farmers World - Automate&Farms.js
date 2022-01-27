@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         Farmers World - Automate&Farms
 // @namespace    https://play.farmersworld.io/
-// @version      1.0.2
+// @version      1.0.3
 // @description  Farmers World - Automate&Farms
 // @author       CoMiKx
 // @match        https://play.farmersworld.io/*
 // @icon         https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=16
 // @icon64       https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=64
-// @grant        none
+// @grant        GM_setValue
+// @grant        GM_getValue
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 // ==/UserScript==
 
@@ -16,6 +17,10 @@ window.automateEnable = true;
 window.storedMiningEnable = true;
 
 window.interval = 5000;
+
+var now = new Date().getTime();
+
+var nextHour = new Date().getTime() + 1800E3;
 
 window.sleep = function (ms) {
     return new Promise((resolve) => {
@@ -87,10 +92,10 @@ window.automateMining = async function () {
         for (var j = 0; j < itemsFarms.length; j++){
             $("section .carousel__img--item").get(j).click();
             if (remainingEnergy <= 30 ||
-                ($(".info-section > div.info-text__section > div.info-title > div.info-title-name").get(0).innerText == "Barley Seed" && 
-                $(".card-section .card-number .content").text().split("/ ").map(Number)[0] == 41 ? remainingEnergy <= 230 : 
-                $(".info-section > div.info-text__section > div.info-title > div.info-title-name").get(0).innerText == "Corn Seed" && 
-                $(".card-section .card-number .content").text().split("/ ").map(Number)[0] == 41 ? remainingEnergy <= 230 : false)){
+                ($(".info-section > div.info-text__section > div.info-title > div.info-title-name").get(0).innerText == "Barley Seed" && $(".card-section .card-number .content").text().split("/ ").map(Number)[0] == 41
+                 ? remainingEnergy <= 230 :
+                 $(".info-section > div.info-text__section > div.info-title > div.info-title-name").get(0).innerText == "Corn Seed" && $(".card-section .card-number .content").text().split("/ ").map(Number)[0] == 41
+                 ? remainingEnergy <= 230 : false)) {
                 if ((remainingEnergy + (remainingFood * 5.0)) >= 500) {
                     $(".resource-energy .resource-energy--plus").click();
                     do {
@@ -110,6 +115,10 @@ window.automateMining = async function () {
         $("#root > div > div > div.game-content > section.navbar-container > div:nth-child(5) > img").click();
         $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(1) > span").click();
     }
+    if(now >= nextHour){
+        window.location.reload();
+    }
+    now = new Date().getTime();
 }
 
 window.automateInterval = setInterval(async function () {
