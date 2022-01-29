@@ -87,6 +87,7 @@ window.automateMining = async function () {
         activeItem.get(0).click();
         $(".navbar-container img[Alt='Map']").click();
         $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(3) > span").click();
+        await window.sleep(1500);
         var itemsFarms = $("section .carousel__img--item");
         var activeItemFarm = $("section .carousel__img--item.active");
         for (var j = 0; j < itemsFarms.length; j++){
@@ -106,6 +107,10 @@ window.automateMining = async function () {
                     await window.sleep(1000);
                     break;
                 }
+            } else if ($(".card-section .card-number .content").text().split("/ ").map(Number)[0] == 41 && $(".info-section > div.info-time > div").get(0).innerText == "00:00:00") {
+                $(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").click();
+                await window.sleep(1000);
+                break;
             } else if ($(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").get(0) != undefined) {
                 $(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").click();
                 await window.sleep(1000);
@@ -114,6 +119,7 @@ window.automateMining = async function () {
         activeItemFarm.get(0).click();
         $("#root > div > div > div.game-content > section.navbar-container > div:nth-child(5) > img").click();
         $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(1) > span").click();
+        await window.sleep(1000);
     }
     if(now >= nextHour){
         window.location.reload();
