@@ -110,7 +110,7 @@ window.automateMining = async function () {
             } else if ($(".card-section .card-number .content").text().split("/ ").map(Number)[0] == 41 && $(".info-section > div.info-time > div").get(0).innerText == "00:00:00") {
                 $(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").click();
                 await window.sleep(1000);
-                window.location.reload();
+                break;
             } else if ($(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").get(0) != undefined) {
                 $(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").click();
                 await window.sleep(1000);
