@@ -114,17 +114,16 @@ window.automateMining = async function () {
             } else if ($(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").get(0) != undefined) {
                 $(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").click();
                 await window.sleep(1000);
+            } if(now >= nextHour){
+                window.location.reload();
             }
+            now = new Date().getTime();
         }
         activeItemFarm.get(0).click();
         $("#root > div > div > div.game-content > section.navbar-container > div:nth-child(5) > img").click();
         $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(1) > span").click();
         await window.sleep(1000);
     }
-    if(now >= nextHour){
-        window.location.reload();
-    }
-    now = new Date().getTime();
 }
 
 window.automateInterval = setInterval(async function () {
