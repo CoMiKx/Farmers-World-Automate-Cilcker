@@ -83,6 +83,10 @@ window.automateMining = async function () {
                     await window.waitForModal();
                 }
             }
+            if(now >= nextHour){
+                window.location.reload();
+            }
+            now = new Date().getTime();
         }
         activeItem.get(0).click();
         $(".navbar-container img[Alt='Map']").click();
@@ -114,7 +118,8 @@ window.automateMining = async function () {
             } else if ($(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").get(0) != undefined) {
                 $(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").click();
                 await window.sleep(1000);
-            } if(now >= nextHour){
+            } 
+            if(now >= nextHour){
                 window.location.reload();
             }
             now = new Date().getTime();
