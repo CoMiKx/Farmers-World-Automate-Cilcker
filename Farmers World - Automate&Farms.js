@@ -7,8 +7,6 @@
 // @match        https://play.farmersworld.io/*
 // @icon         https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=16
 // @icon64       https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://farmersworld.io&size=64
-// @grant        GM_setValue
-// @grant        GM_getValue
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 // ==/UserScript==
 
@@ -83,10 +81,6 @@ window.automateMining = async function () {
                     await window.waitForModal();
                 }
             }
-            if(now >= nextHour){
-                window.location.reload();
-            }
-            now = new Date().getTime();
         }
         activeItem.get(0).click();
         $(".navbar-container img[Alt='Map']").click();
@@ -118,13 +112,24 @@ window.automateMining = async function () {
             } else if ($(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").get(0) != undefined) {
                 $(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").click();
                 await window.sleep(1000);
-            } 
+            } if(now >= nextHour){
+                window.location.reload();
+            } now = new Date().getTime();
+        }
+        activeItemFarm.get(0).click();
+        $("#root > div > div > div.game-content > section.navbar-container > div:nth-child(5) > img").click();
+        $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(4) > span").click();
+        await window.sleep(1500);
+        for (var k=0; k < $("section .carousel__img--item").length; k++){
+            $("section .carousel__img--item").get(k).click();
+            if ($(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").get(0) != undefined){
+                $(".info-section > div.home-card-button__group > div:nth-child(1) > button > div").click();
+            }
             if(now >= nextHour){
                 window.location.reload();
             }
             now = new Date().getTime();
         }
-        activeItemFarm.get(0).click();
         $("#root > div > div > div.game-content > section.navbar-container > div:nth-child(5) > img").click();
         $("body > div.modal-wrapper > div > section > div.modal-map-content > div:nth-child(1) > span").click();
         await window.sleep(1000);
